@@ -76,9 +76,7 @@ future = m.make_future_dataframe(periods=num_future_days)
 forecast = m.predict(future)
 
 # Show and plot forecast for the selected admission type
-st.subheader(f'{admission_type} Forecast Data')
-st.write(forecast.tail())
-
+st.subheader(f'{admission_type} Forecast')
 st.write(f'{admission_type} Forecast plot for {n_years} years')
 fig1 = plot_plotly(m, forecast)
 st.plotly_chart(fig1)
